@@ -1,4 +1,4 @@
-import React from './components/Pedido'
+import Pedido from './components/Pedido'
 
 const App = () => {
   return (

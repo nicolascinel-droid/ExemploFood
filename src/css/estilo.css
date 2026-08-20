@@ -1,0 +1,398 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #164e63 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #0e7490 0%, transparent 30%),
+        #111827;
+    color: #e5e7eb;
+}
+
+
+/* ========================================
+   CONTAINER PRINCIPAL
+======================================== */
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 35px;
+    background: rgba(31, 41, 55, 0.95);
+    border: 1px solid #374151;
+    border-radius: 18px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(6, 182, 212, 0.08);
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.container h2 {
+    text-align: left;
+    font-size: 30px;
+    color: #67e8f9;
+    margin-bottom: 35px;
+    padding-left: 15px;
+    border-left: 5px solid #06b6d4;
+    letter-spacing: 1px;
+}
+
+.container h2::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #374151;
+    margin-top: 18px;
+}
+
+
+/* ========================================
+   CARDS DO CARDÁPIO
+======================================== */
+
+.item-cardapio {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 12px;
+
+    padding: 20px 22px;
+    margin-bottom: 14px;
+
+    transition: 0.3s ease;
+}
+
+.item-cardapio:hover {
+    border-color: #06b6d4;
+    background: #263445;
+    transform: translateX(5px);
+
+    box-shadow:
+        -5px 0 0 #06b6d4,
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.item-cardapio > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f3f4f6;
+}
+
+
+/* ========================================
+   CONTROLES DE QUANTIDADE
+======================================== */
+
+.item-controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-controles span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    background: #111827;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+    color: #67e8f9;
+}
+
+
+/* ========================================
+   BOTÕES + E -
+======================================== */
+
+.btn-qtn {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #0891b2;
+    border-radius: 8px;
+
+    background: #083344;
+    color: #67e8f9;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-qtn:hover {
+    background: #06b6d4;
+    color: #082f49;
+    transform: scale(1.08);
+}
+
+.btn-qtn:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================================
+   DIVISOR
+======================================== */
+
+.linha {
+    border: none;
+    height: 1px;
+    background: #374151;
+    margin: 35px 0;
+}
+
+
+/* ========================================
+   RESUMO
+======================================== */
+
+.container h3 {
+    color: #67e8f9;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   CARRINHO VAZIO
+======================================== */
+
+.container > p {
+    padding: 20px;
+
+    text-align: center;
+
+    background: #111827;
+    border: 1px dashed #4b5563;
+    border-radius: 10px;
+
+    color: #9ca3af;
+}
+
+
+/* ========================================
+   LISTA DO PEDIDO
+======================================== */
+
+.resumo-lista {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.resumo-lista li {
+    display: flex;
+    align-items: center;
+
+    padding: 15px;
+
+    margin-bottom: 8px;
+
+    background: #111827;
+    border-radius: 8px;
+
+    border-left: 3px solid #06b6d4;
+
+    color: #d1d5db;
+
+    transition: 0.2s ease;
+}
+
+.resumo-lista li:hover {
+    background: #172033;
+    padding-left: 20px;
+}
+
+
+/* ========================================
+   SUBTOTAL E TAXA
+======================================== */
+
+.resumo-lista + p {
+    color: #9ca3af;
+    padding: 5px 0;
+}
+
+
+/* ========================================
+   TOTAL
+======================================== */
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #083344,
+        #164e63
+    );
+
+    border: 1px solid #0891b2;
+    border-radius: 12px;
+
+    color: #a5f3fc;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 0 20px rgba(6, 182, 212, 0.08);
+}
+
+
+/* ========================================
+   BOTÃO CONFIRMAR
+======================================== */
+
+.btn-confirmar {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 17px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #06b6d4;
+    color: #082f49;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 5px 20px rgba(6, 182, 212, 0.2);
+}
+
+.btn-confirmar:hover:not(:disabled) {
+    background: #22d3ee;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 30px rgba(6, 182, 212, 0.35);
+}
+
+.btn-confirmar:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-confirmar:disabled {
+    background: #4b5563;
+    color: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* ========================================
+   ALERTA DE STATUS
+======================================== */
+
+.alerta-status {
+    margin-top: 25px;
+    padding: 18px;
+
+    background: #111827;
+
+    border: 1px solid #06b6d4;
+    border-radius: 10px;
+
+    color: #67e8f9;
+
+    text-align: center;
+
+    animation: aparecer 0.4s ease;
+}
+
+.alerta-status strong {
+    color: #22d3ee;
+    margin-right: 5px;
+}
+
+
+/* ========================================
+   ANIMAÇÃO
+======================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        padding: 22px;
+        margin: 25px auto;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .item-cardapio {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .item-controles {
+        justify-content: flex-end;
+    }
+
+    .total {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+}
